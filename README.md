@@ -20,7 +20,7 @@
 - create public bitbucket or github repository
 - commit and push changes continuously
 - use proper commit messages
-- share your solution with us
+- share your solution with us (link or read permissions for richard.solar@goodrequest.com)
 
 
 ### You can
@@ -142,7 +142,7 @@ example of response for request with `language: 'sk'`
 
 ## Bonus task 4 - error handling
 
-Create proper way how to handle all errors in application. Use console.error display error in terminal, user can never see stack trace or real error message. You can write error logs to file with.
+Create proper way how to handle all errors in application. Use console.error display error in terminal, user can never see stack trace or real error message. You can write error logs to file.
 
 response status code >= 500
 
