@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
+	"compilerOptions": {
 		"esModuleInterop": true,
-        "target": "es6",
-        "module": "commonjs",
-    	"outDir": "./dist",
+		"target": "es6",
+		"module": "commonjs",
+		"outDir": "./dist",
 		"sourceMap": true,
-        "noImplicitAny": true,
-		"typeRoots" : [
-            "node_modules/@types",
+		"noImplicitAny": true,
+		"typeRoots": [
+			"node_modules/@types",
 			"./src/types"
 		],
 		"resolveJsonModule": true
-    },
-    "include": [
+	},
+	"include": [
 		"./src/**/*"
 	],
 	"exclude": [
-        "node_modules"
-    ]
+		"node_modules"
+	]
 }
