@@ -15,7 +15,7 @@ const seedDB = async () => {
 		name: 'Program 2'
 	}, {
 		name: 'Program 3'
-	}] as any[], { returning: true })
+	}])
 
 	await Exercise.bulkCreate([{
 		name: 'Exercise 1',

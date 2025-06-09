@@ -7,14 +7,14 @@ import {
 
 import { models } from '../db'
 
-const router: Router = Router()
+const router = Router()
 
 const {
 	Program
 } = models
 
 export default () => {
-	router.get('/', async (_req: Request, res: Response, _next: NextFunction) => {
+	router.get('/', async (_req: Request, res: Response, _next: NextFunction): Promise<any> => {
 		const programs = await Program.findAll()
 		return res.json({
 			data: programs,

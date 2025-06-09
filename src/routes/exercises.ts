@@ -2,7 +2,7 @@ import { Router, Request, Response, NextFunction } from 'express'
 
 import { models } from '../db'
 
-const router: Router = Router()
+const router = Router()
 
 const {
 	Exercise,
@@ -10,11 +10,10 @@ const {
 } = models
 
 export default () => {
-	router.get('/', async (_req: Request, res: Response, _next: NextFunction) => {
+	router.get('/', async (_req: Request, res: Response, _next: NextFunction): Promise<any> => {
 		const exercises = await Exercise.findAll({
 			include: [{
-				model: Program,
-				as: 'program'
+				model: Program
 			}]
 		})
 
