@@ -1,6 +1,3 @@
-/* eslint import/no-cycle: 0 */
-
-import path from 'path'
 import fs from 'fs'
 import { Sequelize } from 'sequelize'
 
@@ -13,13 +10,14 @@ const sequelize: Sequelize = new Sequelize('postgresql://localhost:5432/fitness_
 
 sequelize.authenticate().catch((e: any) => console.error(`Unable to connect to the database${e}.`))
 
-const modelsBuilder = (instance: Sequelize) => ({
-	// Import models to sequelize
-	Exercise: instance.import(path.join(__dirname, 'exercise'), defineExercise),
-	Program: instance.import(path.join(__dirname, 'program'), defineProgram),
-})
+const Exercise = defineExercise(sequelize, 'exercise')
+const Program = defineProgram(sequelize, 'program')
 
-const models = modelsBuilder(sequelize)
+const models = {
+	Exercise,
+	Program
+}
+type Models = typeof models
 
 // check if every model is imported
 const modelsFiles = fs.readdirSync(__dirname)
@@ -34,4 +32,5 @@ Object.values(models).forEach((value: any) => {
 	}
 })
 
-export { models, modelsBuilder, sequelize }
+export { models, sequelize }
+export type { Models }
