@@ -2,8 +2,8 @@
 
 ### Requirements
 
-- node.js ^12.14.0
-- postgres ^11.5
+- node.js ^16.0.0
+- postgres ^16
 - favourite IDE
 - git
 
