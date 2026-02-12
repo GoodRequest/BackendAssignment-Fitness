@@ -11,7 +11,7 @@
 
 - fork or download this repository
 - install dependencies with `npm i`
-- create fitness_app database (application access `postgresql://localhost:5432/fitness_app`, make sure you use correct port and db name )
+- create fitness_app database with `docker compose up -d` or manually (application access `postgresql://postgres:root@localhost:5432/fitness_app`, make sure you use correct port, db name and db credentials )
 - create db schema and populate db with `npm run seed`
 - run express server with `npm start`
 

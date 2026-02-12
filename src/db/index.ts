@@ -4,7 +4,7 @@ import { Sequelize } from 'sequelize'
 import defineExercise from './exercise'
 import defineProgram from './program'
 
-const sequelize: Sequelize = new Sequelize('postgresql://localhost:5432/fitness_app', {
+const sequelize: Sequelize = new Sequelize('postgresql://postgres:root@localhost:5432/fitness_app', {
 	logging: false
 })
 
